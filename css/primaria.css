@@ -1,0 +1,171 @@
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none; /* quita el subrayado del enlace */
+    color: inherit; /* mantiene el color original del texto */
+    cursor: pointer;
+}
+
+/* Opcional: efecto hover */
+.logo-link:hover {
+    opacity: 0.9;
+}
+
+.logo-image img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+.main-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.exercise-container {
+    display: grid;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.exercise-section {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.exercise-section:hover {
+    transform: translateY(-5px);
+}
+
+.exercise-section h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.exercise-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.question {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 1rem;
+}
+
+.exercise-input {
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+.exercise-input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.exercise-select {
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.verify-btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.verify-btn:hover {
+    background-color: #27ae60;
+}
+
+.option-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option-btn:hover {
+    background-color: #2980b9;
+}
+
+.new-exercise-btn {
+    background-color: #9b59b6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-exercise-btn:hover {
+    background-color: #8e44ad;
+}
+
+.result {
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    min-height: 3rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .exercise-container {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .exercise-input {
+        width: 100%;
+    }
+}

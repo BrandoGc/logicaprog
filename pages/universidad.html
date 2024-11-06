@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad - LogicaProg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/universidad.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-image">
+                <!-- Aquí puedes añadir tu logo como imagen -->
+                <img src="../images/logo.png" alt="LogicaProg Logo">
+           
+            </div>
+            <div class="logo-text">
+                <a href="../index.html">LogicaProg</a>
+            </div>
+        </div>
+        
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-center">
+            <a href="../index.html" class="nav-link active">Inicio</a>
+            <a href="primaria.html" class="nav-link">Primaria</a>
+            <a href="secundaria.html" class="nav-link">Secundaria</a>
+            <a href="universidad.html" class="nav-link active">Universidad</a>
+        </div>
+
+        <button class="login-button">
+            <span>Puntos: </span>
+            <span id="score">0</span>
+        </button>
+    </nav>
+
+    <main class="content-section">
+        <div class="exercise-type-selector">
+            <button class="type-btn active" data-section="calculadora">Calculadora</button>
+            <button class="type-btn" data-section="conversiones">Conversiones</button>
+            <button class="type-btn" data-section="texto">Análisis de Texto</button>
+            <button class="type-btn" data-section="arreglos">Arreglos</button>
+        </div>
+
+        <!-- Sección Calculadora -->
+        <section id="calculadora" class="exercise-section active">
+            <h2>Calculadora Interactiva</h2>
+            <div class="calculator-container">
+                <input type="number" id="num1" placeholder="Primer número">
+                <select id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">×</option>
+                    <option value="/">÷</option>
+                </select>
+                <input type="number" id="num2" placeholder="Segundo número">
+                <button onclick="calculate()">Calcular</button>
+                <div id="calc-result" class="result">Resultado: </div>
+            </div>
+        </section>
+
+        <!-- Sección Conversiones -->
+        <section id="conversiones" class="exercise-section">
+            <h2>Conversiones de Números</h2>
+            <div class="conversion-container">
+                <div class="conversion-group">
+                    <h3>Binario a Hexadecimal/Decimal</h3>
+                    <input type="text" id="binary-input" placeholder="Número binario">
+                    <button onclick="convertFromBinary()">Convertir</button>
+                    <div id="binary-result" class="result">
+                        Hexadecimal: <span id="hex-result"></span><br>
+                        Decimal: <span id="decimal-result"></span>
+                    </div>
+                </div>
+                <div class="conversion-group">
+                    <h3>Decimal a Binario/Hexadecimal</h3>
+                    <input type="number" id="decimal-input" placeholder="Número decimal">
+                    <button onclick="convertFromDecimal()">Convertir</button>
+                    <div id="decimal-convert-result" class="result"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Análisis de Texto -->
+        <section id="texto" class="exercise-section">
+            <h2>Análisis de Texto</h2>
+            <div class="text-analysis-container">
+                <textarea id="text-input" placeholder="Ingrese el texto a analizar"></textarea>
+                <button onclick="analyzeText()">Analizar Texto</button>
+                <div id="text-analysis-result" class="result"></div>
+                
+                <div class="text-comparison">
+                    <h3>Comparar Frases</h3>
+                    <input type="text" id="phrase1" placeholder="Primera frase">
+                    <input type="text" id="phrase2" placeholder="Segunda frase">
+                    <button onclick="compareTexts()">Comparar</button>
+                    <div id="comparison-result" class="result"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Arreglos -->
+        <section id="arreglos" class="exercise-section">
+            <h2>Manejo de Arreglos</h2>
+            <div class="array-container">
+                <input type="text" id="array-input" placeholder="Ingrese números separados por comas">
+                <div class="array-buttons">
+                    <button onclick="findPrimes()">Encontrar Primos</button>
+                    <button onclick="findPerfectNumbers()">Encontrar Números Perfectos</button>
+                    <button onclick="calculateStats()">Calcular Promedio y Moda</button>
+                </div>
+                <div id="array-result" class="result"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/universidad.js"></script>
+</body>
+</html>

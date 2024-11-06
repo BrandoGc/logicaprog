@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Primaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/primaria.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-image">
+                <!-- Aquí puedes añadir tu logo como imagen -->
+                <img src="../images/logo.png" alt="LogicaProg Logo">
+           
+            </div>
+            <div class="logo-text">
+                <a href="../index.html">LogicaProg</a>
+            </div>
+        </div>
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-center">
+            <a href="../index.html" class="nav-link active">Inicio</a>
+            <a href="primaria.html" class="nav-link active">Primaria</a>
+            <a href="secundaria.html" class="nav-link">Secundaria</a>
+            <a href="universidad.html" class="nav-link">Universidad</a>
+        </div>
+
+        <button class="login-button">Iniciar Sesión</button>
+    </nav>
+
+    <main class="main-content">
+        <!-- Contenedor de ejercicios -->
+        <div class="exercise-container">
+            <!-- Secuencias Numéricas -->
+            <div id="secuencias" class="exercise-section">
+                <h2>Secuencias Numéricas</h2>
+                <div class="exercise-content">
+                    <div id="ejercicioSecuencia" class="question"></div>
+                    <div class="input-group">
+                        <input type="number" id="respuestaSecuencia" class="exercise-input">
+                        <button onclick="verificarSecuencia()" class="verify-btn">Verificar</button>
+                    </div>
+                    <div id="resultadoSecuencia" class="result"></div>
+                    <button onclick="nuevaSecuencia()" class="new-exercise-btn">Nueva Secuencia</button>
+                </div>
+            </div>
+
+            <!-- Comparaciones -->
+            <div id="comparaciones" class="exercise-section">
+                <h2>Comparaciones</h2>
+                <div class="exercise-content">
+                    <div id="ejercicioComparacion" class="question"></div>
+                    <div class="button-group">
+                        <button onclick="seleccionarOpcion(0)" class="option-btn">Primera Opción</button>
+                        <button onclick="seleccionarOpcion(1)" class="option-btn">Segunda Opción</button>
+                    </div>
+                    <div id="resultadoComparacion" class="result"></div>
+                    <button onclick="nuevaComparacion()" class="new-exercise-btn">Nueva Comparación</button>
+                </div>
+            </div>
+
+            <!-- Condicionales -->
+            <div id="condicionales" class="exercise-section">
+                <h2>Condicionales</h2>
+                <div class="exercise-content">
+                    <div id="ejercicioCondicional" class="question"></div>
+                    <select id="respuestaCondicional" class="exercise-select">
+                        <option value="">Selecciona una respuesta</option>
+                    </select>
+                    <button onclick="verificarCondicional()" class="verify-btn">Verificar</button>
+                    <div id="resultadoCondicional" class="result"></div>
+                    <button onclick="nuevoCondicional()" class="new-exercise-btn">Nuevo Ejercicio</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/primaria.js"></script>
+</body>
+</html>

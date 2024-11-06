@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Secundaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/secundaria.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-image">
+                <!-- Aquí puedes añadir tu logo como imagen -->
+                <img src="../images/logo.png" alt="LogicaProg Logo">
+           
+            </div>
+            <div class="logo-text">
+                <a href="../index.html">LogicaProg</a>
+            </div>
+        </div>
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-center">
+            <a href="../index.html" class="nav-link active">Inicio</a>
+            <a href="primaria.html" class="nav-link">Primaria</a>
+            <a href="secundaria.html" class="nav-link active">Secundaria</a>
+            <a href="universidad.html" class="nav-link">Universidad</a>
+        </div>
+
+        <button class="login-button">Iniciar Sesión</button>
+    </nav>
+
+    <main class="main-content">
+        <!-- Ejercicios de Bucles -->
+        <section class="exercise-section">
+            <h2 class="section-title">1. Ejercicios de Bucles</h2>
+            
+            <!-- Patrones y Repeticiones -->
+            <div class="exercise-card">
+                <h3>Identificar patrones y repeticiones</h3>
+                <div class="input-group">
+                    <input type="text" id="secuenciaInput" placeholder="Ingresa números separados por coma" class="input-field">
+                    <input type="number" id="numeroABuscar" placeholder="Número a buscar" class="input-field">
+                    <button onclick="contarRepeticiones()" class="btn-primary">Contar Repeticiones</button>
+                </div>
+                <div id="resultadoRepeticiones" class="result"></div>
+            </div>
+
+            <!-- Suma Números Naturales -->
+            <div class="exercise-card">
+                <h3>Suma de Números Naturales</h3>
+                <div class="input-group">
+                    <input type="number" id="numeroSuma" placeholder="Ingresa un número" class="input-field">
+                    <button onclick="sumarNaturales()" class="btn-primary">Calcular Suma</button>
+                </div>
+                <div id="resultadoSuma" class="result"></div>
+            </div>
+
+            <!-- Factorial -->
+            <div class="exercise-card">
+                <h3>Factorial</h3>
+                <div class="input-group">
+                    <input type="number" id="numeroFactorial" placeholder="Ingresa un número" class="input-field">
+                    <button onclick="calcularFactorial()" class="btn-primary">Calcular Factorial</button>
+                </div>
+                <div id="resultadoFactorial" class="result"></div>
+            </div>
+
+            <!-- Pares e Impares -->
+            <div class="exercise-card">
+                <h3>Números Pares e Impares</h3>
+                <div class="input-group">
+                    <input type="number" id="rangoInicio" placeholder="Número inicial" class="input-field">
+                    <input type="number" id="rangoFin" placeholder="Número final" class="input-field">
+                    <button onclick="encontrarParesImpares()" class="btn-primary">Buscar</button>
+                </div>
+                <div id="resultadoParesImpares" class="result"></div>
+            </div>
+
+            <!-- Tabla Multiplicar/Sumar -->
+            <div class="exercise-card">
+                <h3>Tabla de Multiplicar/Sumar</h3>
+                <div class="input-group">
+                    <input type="number" id="numeroTabla" placeholder="Ingresa un número" class="input-field">
+                    <select id="operacionTabla" class="select-field">
+                        <option value="*">Multiplicar</option>
+                        <option value="+">Sumar</option>
+                    </select>
+                    <button onclick="generarTabla()" class="btn-primary">Generar Tabla</button>
+                </div>
+                <div id="resultadoTabla" class="result"></div>
+            </div>
+
+            <!-- Fibonacci -->
+            <div class="exercise-card">
+                <h3>Fibonacci</h3>
+                <div class="input-group">
+                    <input type="number" id="cantidadFibonacci" placeholder="Cantidad de números" class="input-field">
+                    <button onclick="generarFibonacci()" class="btn-primary">Generar</button>
+                </div>
+                <div id="resultadoFibonacci" class="result"></div>
+            </div>
+        </section>
+
+        <!-- Bucles Avanzados -->
+        <section class="exercise-section">
+            <h2 class="section-title">2. Bucles Avanzados</h2>
+            
+            <!-- Números Primos -->
+            <div class="exercise-card">
+                <h3>Verificar Número Primo</h3>
+                <div class="input-group">
+                    <input type="number" id="numeroPrimo" placeholder="Ingresa un número" class="input-field">
+                    <button onclick="verificarPrimo()" class="btn-primary">Verificar</button>
+                </div>
+                <div id="resultadoPrimo" class="result"></div>
+            </div>
+
+            <!-- Números Perfectos -->
+            <div class="exercise-card">
+                <h3>Verificar Número Perfecto</h3>
+                <div class="input-group">
+                    <input type="number" id="numeroPerfecto" placeholder="Ingresa un número" class="input-field">
+                    <button onclick="verificarPerfecto()" class="btn-primary">Verificar</button>
+                </div>
+                <div id="resultadoPerfecto" class="result"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/secundaria.js"></script>
+</body>
+</html>
